@@ -11,4 +11,8 @@ import { lorem } from "faker";
 })
 export class AppComponent {
   randomText : string= lorem.sentence();
+
+  onChangeInput(text:string){
+    console.log(text);
+  };
 }
