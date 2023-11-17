@@ -11,11 +11,17 @@ import { lorem } from "faker";
 })
 export class AppComponent {
   randomText : string= lorem.sentence();
-  
   inputText:string='';
   
   onChangeInput(text:string){
     this.inputText=text;
+    }
+
+    compare(letterRandom:string, letterEnter:string):string{
+      if (!letterEnter){
+        return 'pending';
+      }
+      return letterEnter === letterRandom?'correct':'incorrect';  
     }
   };
 
